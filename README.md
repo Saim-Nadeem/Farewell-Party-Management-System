@@ -24,3 +24,10 @@ arrangements for dinner, stage performances, decorations, and venue setup. The s
 ensures a collaborative and inclusive experience by enabling university-wide participation in 
 menu suggestions and performance volunteering, with a voting mechanism to finalize 
 choices.
+
+
+Features
+1. User Authentication
+o Student and teacher registration/login with personal details and family member 
+information.
+o Unique dashboards for different roles.
