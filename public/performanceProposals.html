@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Proposals</title>
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light gray background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px; /* Adjust max-width as needed */
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            background-color: #fff; /* White background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            color: #555; /* Dark gray text */
+            margin-bottom: 8px;
+            display: block;
+            text-align: left; /* Left align labels */
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #e91e63; /* Pinkish border color on focus */
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #e91e63; /* Pinkish background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #c2185b; /* Darker pinkish hover color */
+        }
+    </style>
+    <!-- Bootstrap CSS (Optional, for form consistency) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Performance Proposals</h1>
+        <form id="performanceProposals" action="/performanceProposals" method="POST">
+            <div class="form-group">
+                <label for="performanceType">Performance Type</label>
+                <input type="text" id="performanceType" name="performanceType" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="performanceDuration">Performance Duration (minutes)</label>
+                <input type="number" min="1" id="performanceDuration" name="performanceDuration" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="anySpecial">Any Special Requirements</label>
+                <input type="text" id="anySpecial" name="anySpecial" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (Optional, for enhanced form functionality) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

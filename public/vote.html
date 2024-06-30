@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Items</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Inline CSS for custom styles */
+        body {
+            background: linear-gradient(to right, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        #menuForm {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto; /* Center the form horizontally */
+        }
+        #menuItemsContainer label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #menuItemsContainer input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Menu Items</h1>
+        <form id="menuForm" action="/submit-menu" method="POST">
+            <div id="menuItemsContainer">
+                <!-- Menu items checkboxes will be dynamically added here -->
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fetch menu items from server and create checkboxes
+        fetch('/menu-items')
+            .then(response => response.json())
+            .then(menuItems => {
+                const menuItemsContainer = document.getElementById('menuItemsContainer');
+                menuItems.forEach(item => {
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.name = 'items';
+                    checkbox.value = item.MenuItemID;
+                    const label = document.createElement('label');
+                    label.textContent = item.ItemName;
+                    menuItemsContainer.appendChild(checkbox);
+                    menuItemsContainer.appendChild(label);
+                    menuItemsContainer.appendChild(document.createElement('br'));
+                });
+            })
+            .catch(error => console.error('Error fetching menu items:', error));
+    </script>
+</body>
+</html>

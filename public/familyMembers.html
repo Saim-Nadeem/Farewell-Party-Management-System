@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+        form {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"],
+        input[type="text"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="number"]:focus,
+        input[type="text"]:focus,
+        button:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        button {
+            background-color: #e91e63;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #c2185b;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Family Registration</h1>
+    <form id="familyRegistrationForm" action="/familyregistration" method="POST">
+        <div class="form-group">
+            <label for="numberOfMembers">Number of Family Members:</label>
+            <input type="number" id="numberOfMembers" name="numberOfMembers" class="form-control" required min="1">
+        </div>
+        <div id="namesContainer"></div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- JavaScript for dynamic input fields -->
+    <script>
+        document.getElementById("numberOfMembers").addEventListener("input", function(event) {
+            const numberOfMembers = parseInt(this.value);
+            const namesContainer = document.getElementById("namesContainer");
+            namesContainer.innerHTML = ""; // Clear previous input fields
+
+            // Dynamically generate input fields for family member names
+            for (let i = 1; i <= numberOfMembers; i++) {
+                const nameLabel = document.createElement("label");
+                nameLabel.textContent = `Name of Family Member ${i}:`;
+                const nameInput = document.createElement("input");
+                nameInput.type = "text";
+                nameInput.name = `familyMember${i}`;
+                nameInput.required = true;
+                nameInput.className = "form-control";
+
+                namesContainer.appendChild(nameLabel);
+                namesContainer.appendChild(nameInput);
+                namesContainer.appendChild(document.createElement("br")); // Add line break for spacing
+            }
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

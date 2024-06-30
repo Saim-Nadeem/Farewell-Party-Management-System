@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Page</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for color */
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .announcement {
+            background-color: #007bff; /* Blue background */
+            color: #fff; /* White text */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px; /* Padding */
+            margin-bottom: 20px; /* Bottom margin */
+        }
+    </style>
+</head>
+<body>
+    <div id="announcement-list" class="container mt-5">
+        <!-- Announcement items will be displayed here -->
+    </div>
+
+    <!-- Bootstrap JS and Fetch Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Fetch and display announcements
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/announcements')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('announcement-list').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching announcements:', error));
+        });
+    </script>
+</body>
+</html>
