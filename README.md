@@ -52,9 +52,7 @@ Features
 
 5. Task Allocation and Tracking
 
-   o Organizers assign tasks related to decorations, venue setup, and other 
-
-responsibilities to student volunteers.
+   o Organizers assign tasks related to decorations, venue setup, and other responsibilities to student volunteers.
 
    o Track progress and completion status of tasks.
 
@@ -82,12 +80,12 @@ responsibilities to student volunteers.
 
 10.Database Integration
 
-   • Establish a MySQL database connection with Node.js.
+      • Establish a MySQL database connection with Node.js.
 
-   • Implement MySQL triggers and stored procedures for budget tracking and notifications.
+      • Implement MySQL triggers and stored procedures for budget tracking and notifications.
 
 11.Reports and Notifications
 
-   • Generate reports for teachers, students, and organizers.
+      • Generate reports for teachers, students, and organizers.
 
-   • Send notifications when budget thresholds are exceeded
+      • Send notifications when budget thresholds are exceeded
