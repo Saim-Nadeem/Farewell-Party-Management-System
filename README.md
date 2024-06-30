@@ -27,7 +27,67 @@ choices.
 
 
 Features
+
 1. User Authentication
-o Student and teacher registration/login with personal details and family member 
-information.
-o Unique dashboards for different roles.
+
+   o Student and teacher registration/login with personal details and family member information.
+
+   o Unique dashboards for different roles.
+
+2. Menu Suggestions and Voting
+
+   o Students suggest dinner menu items.
+
+   o Voting system to select the most popular items.
+
+3. Performance Proposals and Voting
+
+   o Students propose performances with details such as type, duration, and requirements.
+
+   o Voting to select the most anticipated performances.
+
+4. Teacher and Family Registration
+
+   o Teachers register for the event with details of accompanying family members.
+
+5. Task Allocation and Tracking
+
+   o Organizers assign tasks related to decorations, venue setup, and other 
+
+responsibilities to student volunteers.
+
+   o Track progress and completion status of tasks.
+
+6. Attendance Tracking
+
+   o Track the attendance of students, teachers, and their families.
+
+   o Generate reports on the number of attendees and any special requests.
+
+7. Budget Tracking
+
+   o Monitor expenses related to venue booking, catering, decorations, etc.
+
+   o Regularly update the budget status to avoid overspending.
+
+8. Role-Based Use Cases
+
+   o Manage dinner menu, performances, updates, invitations, and budget.
+
+   o Task assignment and progress tracking for various teams.
+
+9. User Interface
+
+   o Design and implement a user-friendly interface using HTML and CSS.
+
+10.Database Integration
+
+   • Establish a MySQL database connection with Node.js.
+
+   • Implement MySQL triggers and stored procedures for budget tracking and notifications.
+
+11.Reports and Notifications
+
+   • Generate reports for teachers, students, and organizers.
+
+   • Send notifications when budget thresholds are exceeded
