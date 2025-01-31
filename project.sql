@@ -1,3 +1,5 @@
+-- -*- mode: sql -*-
+
 CREATE DATABASE Project_db;
 USE Project_DB;
 
