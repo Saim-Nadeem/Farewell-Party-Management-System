@@ -78,7 +78,6 @@ It features robust role-based access, collaboration tools, task management, and 
   - Attendance
   - Voting results
   - Task completion
-- Email/SMS alerts for key updates
 
 ---
 
