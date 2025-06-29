@@ -1,91 +1,140 @@
-# Farewell-Party-Management-System
+🎉 Farewell Party Management System
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/a573ff70-bd8b-41b6-8da4-df073d1eab70)
+[![Tech Stack](https://img.shields.io/badge/Frontend-HTML%2FCSS-blue)]()
+[![Backend](https://img.shields.io/badge/Backend-Node.js-green)]()
+[![Database](https://img.shields.io/badge/Database-MySQL-orange)]()
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/a2efd949-9eac-49dc-9816-389293329a3b)
+An interactive, role-based web platform designed to streamline the planning and management of a university farewell party.
+Built for students and teachers, this system enables collaborative decision-making, attendance tracking, budget management, and more — all in one place.
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/5aaae153-5e3d-4cb4-a1f3-56fe4b5e3058)
+---
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/ed651fb4-1528-4be5-9711-d66c02e0ae26)
+## 🖼️ UI Preview
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/43e9d62d-7da6-4982-91e3-857dad7ed8d0)
+![Dashboard](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/a573ff70-bd8b-41b6-8da4-df073d1eab70)
+![Login](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/a2efd949-9eac-49dc-9816-389293329a3b)
+![Voting](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/5aaae153-5e3d-4cb4-a1f3-56fe4b5e3058)
+![Reports](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/ed651fb4-1528-4be5-9711-d66c02e0ae26)
+![Menu](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/43e9d62d-7da6-4982-91e3-857dad7ed8d0)
+![Tracking](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/55874666-d78e-4dfb-bfe0-09d77d088d81)
+![Members](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/88d2df7c-b6de-4aa9-9adc-1d910c3c210c)
+![Invite](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/0cc87dfa-e800-43c8-9e93-0e923bb510b2)
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/55874666-d78e-4dfb-bfe0-09d77d088d81)
+---
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/88d2df7c-b6de-4aa9-9adc-1d910c3c210c)
+## 💡 Project Description
 
-![image](https://github.com/Saim-Nadeem/Farewell-Party-Management-System/assets/137045037/0cc87dfa-e800-43c8-9e93-0e923bb510b2)
+The **Farewell Party Management System** is a full-stack application that helps streamline the event planning process for a farewell party organized by junior students for their seniors.
+It features robust role-based access, collaboration tools, task management, and real-time decision support through voting and notifications.
 
-The Farewell Party Management System is designed to streamline the organization of a 
-memorable farewell event for senior students by junior students, with participation from 
-teachers and their families. This comprehensive platform covers all aspects of event 
-planning, including attendee management, task assignments, budget tracking, and detailed 
-arrangements for dinner, stage performances, decorations, and venue setup. The system 
-ensures a collaborative and inclusive experience by enabling university-wide participation in 
-menu suggestions and performance volunteering, with a voting mechanism to finalize 
-choices.
+---
+
+## 🚀 Key Features
+
+### 🔐 User Authentication
+- Registration & login for students and teachers
+- Role-specific dashboards
+- Family member details (for teacher accounts)
+
+### 🍽️ Menu Suggestion & Voting
+- Students can propose dinner items
+- Voting system to finalize the menu
+
+### 🎭 Performance Proposals & Voting
+- Propose performances (type, duration, notes)
+- Students vote for most-anticipated shows
+
+### 🧾 Teacher & Family Registration
+- Teachers register attendees, including guests/family
+- Seamless invitation handling
+
+### 📋 Task Allocation & Progress Tracking
+- Organizers assign tasks for:
+  - Stage setup
+  - Decoration
+  - Coordination
+- Track task status (Pending/In Progress/Completed)
+
+### 🧍 Attendance Management
+- Mark attendance of students, teachers & family
+- Generate attendance-based reports
+
+### 💰 Budget Tracking & Alerts
+- Log expenses for:
+  - Catering
+  - Venue
+  - Decoration
+- Auto-notifications when thresholds are exceeded
+- Triggers & stored procedures implemented in MySQL
+
+### 🧑‍💼 Role-Based Use Cases
+- Admins: Full access + event control
+- Teachers: View reports, register family, RSVP
+- Students: Vote, suggest items, volunteer for performances
+
+### 📊 Reports & Notifications
+- Dynamic report generation for:
+  - Attendance
+  - Voting results
+  - Task completion
+- Email/SMS alerts for key updates
+
+---
+
+## 🧪 Tech Stack
+
+| Layer        | Technology         |
+|--------------|--------------------|
+| Frontend     | HTML, CSS          |
+| Backend      | Node.js, Express   |
+| Database     | MySQL              |
+| Authentication | Session-based login |
+| Extras       | MySQL Triggers, Stored Procedures |
+
+---
+
+## 📂 Folder Structure
+
+```
+├── public/                  # HTML, CSS files
+├── index.js                # Main backend server
+├── project.sql             # Database schema, triggers
+├── Report.pdf              # Project documentation
+├── DB.drawio               # Database schema diagram
+├── README.md               # You are here
+└── .gitattributes          # Git attributes file
+```
+
+---
+
+## ▶️ How to Run Locally
+
+### 1️⃣ Clone the Repo
+```bash
+git clone https://github.com/Saim-Nadeem/Farewell-Party-Management-System.git
+cd Farewell-Party-Management-System
+```
+
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Setup MySQL
+- Create a database
+- Import `project.sql`
+
+### 4️⃣ Run the App
+```bash
+node index.js
+```
+Visit [http://localhost:3000](http://localhost:3000)
+
+---
 
 
-Features
+## 👤 Author
 
-1. User Authentication
-
-   o Student and teacher registration/login with personal details and family member information.
-
-   o Unique dashboards for different roles.
-
-2. Menu Suggestions and Voting
-
-   o Students suggest dinner menu items.
-
-   o Voting system to select the most popular items.
-
-3. Performance Proposals and Voting
-
-   o Students propose performances with details such as type, duration, and requirements.
-
-   o Voting to select the most anticipated performances.
-
-4. Teacher and Family Registration
-
-   o Teachers register for the event with details of accompanying family members.
-
-5. Task Allocation and Tracking
-
-   o Organizers assign tasks related to decorations, venue setup, and other responsibilities to student volunteers.
-
-   o Track progress and completion status of tasks.
-
-6. Attendance Tracking
-
-   o Track the attendance of students, teachers, and their families.
-
-   o Generate reports on the number of attendees and any special requests.
-
-7. Budget Tracking
-
-   o Monitor expenses related to venue booking, catering, decorations, etc.
-
-   o Regularly update the budget status to avoid overspending.
-
-8. Role-Based Use Cases
-
-   o Manage dinner menu, performances, updates, invitations, and budget.
-
-   o Task assignment and progress tracking for various teams.
-
-9. User Interface
-
-   o Design and implement a user-friendly interface using HTML and CSS.
-
-10.Database Integration
-
-      • Establish a MySQL database connection with Node.js.
-
-      • Implement MySQL triggers and stored procedures for budget tracking and notifications.
-
-11.Reports and Notifications
-
-      • Generate reports for teachers, students, and organizers.
-
-      • Send notifications when budget thresholds are exceeded
+**Saim Nadeem**  
+🔗 GitHub: [Saim-Nadeem](https://github.com/Saim-Nadeem)
